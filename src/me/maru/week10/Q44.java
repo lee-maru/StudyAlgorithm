@@ -5,11 +5,11 @@ import java.util.*;
 /**
  testcase:
  5
- 11 -15 -15
- 14 -5 -15
- -1 -1 -5
- 10 -4 -1
- 19 -4 19
+ 1 : 11 -15 -15
+ 2 : 11 -5 -15
+ 3 : -1 -1 -5
+ 4  10 -4 -1
+ 5  19 -4 19
  */
 public class Q44 {
     public static int[] planets = new int[100_001];
@@ -76,6 +76,7 @@ public class Q44 {
         for (int i = 0; i < v; i++) {
             planets[i] = i;
         }
+
         List<Location> listX = new ArrayList<>();
         List<Location> listY = new ArrayList<>();
         List<Location> listZ = new ArrayList<>();
@@ -88,12 +89,12 @@ public class Q44 {
             listY.add(new Location(i, y));
             listZ.add(new Location(i, z));
         }
+
         Collections.sort(listX);
         Collections.sort(listY);
         Collections.sort(listZ);
 
         List<Edge2> edgeList = new ArrayList<>();
-
         for (int i = 0; i < v-1; i++){
             edgeList.add(new Edge2(listX.get(i).getPlanet(),listX.get(i+1).getPlanet(),listX.get(i+1).getLocation()-listX.get(i).getLocation()));
             edgeList.add(new Edge2(listY.get(i).getPlanet(),listY.get(i+1).getPlanet(),listY.get(i+1).getLocation()-listY.get(i).getLocation()));

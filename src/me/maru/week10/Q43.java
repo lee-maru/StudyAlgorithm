@@ -23,9 +23,9 @@ import java.util.Scanner;
  */
 public class Q43 {
     public static class Edge1 implements Comparable<Edge1>{
-        int nodeX;
-        int nodeY;
-        int distance;
+        int nodeX; // 집 x
+        int nodeY; // 집 y
+        int distance;  // x -> y  도로의 길이라고
 
         public Edge1(int nodeX, int nodeY, int distance) {
             this.nodeX = nodeX;
@@ -63,7 +63,7 @@ public class Q43 {
         int v = sc.nextInt();
         //edge
         int e = sc.nextInt();
-        // result
+        // result 원래 이알고리즘을 생각안했을 때 드는  - 최소한의 길이
         int result = 0;
 
         for (int i = 0; i < v; i++) {
